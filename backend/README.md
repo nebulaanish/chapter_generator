@@ -7,7 +7,7 @@
     - On Linux/Mac: ```$ source .venv/bin/activate```
     - On Windows: ```$ venv\Scripts\activate```
 4. Install required dependencies. <br>
-    ```$ pip install - requirements.txt```
+    ```$ pip install -r requirements.txt```
 5. Create `.env` at same level as `manage.py`.
 6. Add the required credentials.
 7. Run server and access the apis. <br>

@@ -53,4 +53,4 @@ class Resources(BaseModel):
     resource_type = models.CharField(max_length=50, choices=RESOURCE_TYPES)
     upload = models.FileField(upload_to="uploads/")
     chapter = models.ForeignKey(Chapter, on_delete=models.CASCADE)
-    content_extracted = models.TextField()  # content to store in case we need it
+    content_extracted = models.TextField(null=True)  
