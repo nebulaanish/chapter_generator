@@ -12,7 +12,7 @@ class BaseModel(models.Model):
 
 
 # Reference Type Model
-class StypeReference(BaseModel):
+class StyleReference(BaseModel):
     REFERENCE_TYPES = [
         ("professional", "Professional"),
         ("personal", "Personal"),
@@ -28,6 +28,7 @@ class StypeReference(BaseModel):
 
 # Chapter Model
 class Chapter(BaseModel):
+
     CHAPTER_STATUS = [
         ("draft", "Draft"),
         ("completed", "Completed"),
@@ -36,19 +37,20 @@ class Chapter(BaseModel):
     title = models.CharField(max_length=100)
     outlines = models.JSONField()  # Stores chapter outlines in JSON format
     status = models.CharField(max_length=10, choices=CHAPTER_STATUS, default="draft")
-    reference_type = models.ForeignKey(StypeReference, on_delete=models.CASCADE)
+    reference_type = models.ForeignKey(StyleReference, on_delete=models.CASCADE)
 
     def __str__(self):
         return self.title
 
 
 class Resources(BaseModel):
+
     RESOURCE_TYPES = [
         ("blog", "Blog"),
         ("pdf", "Pdf"),
         ("research_paper", "Research Paper"),
     ]
     resource_type = models.CharField(max_length=50, choices=RESOURCE_TYPES)
-    source_url = models.CharField(max_length=100, null=True)
+    upload = models.FileField(upload_to="uploads/")
     chapter = models.ForeignKey(Chapter, on_delete=models.CASCADE)
     content_extracted = models.TextField()  # content to store in case we need it
