@@ -1,7 +1,11 @@
-###  TO RUN BACKEND AND FRONTEND ( AI Powered Chapter Generator From Given Sets Of Contents and Guidelines ) 
+###  TO RUN BACKEND AND FRONTEND ( Chapter Generator ) 
+
+# About : AI Powered Chapter Generator From Given Sets Of Contents and Guidelines
 
 ```
-For Backend : git clone https://github.com/nebulaanish/chapter_generator.git
+For Backend and Frontend : git clone https://github.com/nebulaanish/chapter_generator.git
+```
+```
 cd backend
 python -m venv .venv
 source .venv/bin/activate
@@ -14,7 +18,7 @@ python manage.py runserver
 
 
 ```
-For Frontend : git clone https://github.com/nebulaanish/chapter_generator.git
+
 cd frontend
 npm install
 npm run dev
