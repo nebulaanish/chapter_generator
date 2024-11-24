@@ -1,17 +1,7 @@
+from chapter_generator.serializers.resource import ResourceSerializer
+from chapter_generator.serializers.stylereference import StyleReferenceSerializer
 from chapter_generator.models import Chapter, StyleReference, Resources
 from rest_framework import serializers
-
-
-class StyleReferenceSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = StyleReference
-        fields = ["id", "type"]
-
-
-class ResourceSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Resources
-        fields = ["id", "resource_type", "upload", "content_extracted"]
 
 
 class ChapterSerializer(serializers.ModelSerializer):
@@ -36,3 +26,12 @@ class ChapterSerializer(serializers.ModelSerializer):
             Resources.objects.create(chapter=chapter, **resource_data)
 
         return chapter
+
+
+class ChapterInputSerializer(serializers.Serializer):
+    source = serializers.CharField()
+    source_type = serializers.CharField()
+    course_outline = serializers.ListField(child=serializers.JSONField())
+
+    def create(self, validated_data):
+        return validated_data
