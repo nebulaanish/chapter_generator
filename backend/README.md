@@ -12,3 +12,7 @@
 6. Add the required credentials.
 7. Run server and access the apis. <br>
     `$ python manage.py runserver`
+
+
+### Access the swagger api docs at:
+`http://localhost:8000/docs/`
