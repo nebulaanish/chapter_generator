@@ -34,7 +34,8 @@ SECRET_KEY=
 ```
 
 ```
-( For Frontend ) 
+( For Frontend )
+
 cd frontend
 npm install
 npm run dev
