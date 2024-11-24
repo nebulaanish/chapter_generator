@@ -20,13 +20,13 @@ python manage.py runserver
 
 ```
 
-Set Your Own Creddentials For Backend
+Set Your Own Credentials For Backend
 
 POSTGRES_DB_NAME = 
 POSTGRES_USER = 
 POSTGRES_PASSWORD = 
-POSTGRES_PORT = 
-POSTGRES_HOST = 
+POSTGRES_PORT = 5432 
+POSTGRES_HOST = 127.0.0.1
 GEMINI_API_KEY = 
 SECRET_KEY=
 
