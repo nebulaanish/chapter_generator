@@ -1,6 +1,6 @@
-###  TO RUN BACKEND AND FRONTEND ( Chapter Generator ) 
+#  TO RUN BACKEND AND FRONTEND ( Chapter Generator ) 
 
-# About : AI Powered Chapter Generator From Given Sets Of Contents and Guidelines
+### About : AI Powered Chapter Generator From Given Sets Of Contents and Guidelines
 
 ```
 For Backend and Frontend : git clone https://github.com/nebulaanish/chapter_generator.git
