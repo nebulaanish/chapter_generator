@@ -1,4 +1,4 @@
-###  TO RUN BACKEND AND FRONTEND
+###  TO RUN BACKEND AND FRONTEND ( AI Powered Chapter Generator From Given Sets Of Contents and Guidelines ) 
 
 ```
 For Backend : git clone https://github.com/nebulaanish/chapter_generator.git
