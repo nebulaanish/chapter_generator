@@ -37,12 +37,6 @@ const SourceForm: React.FC<SourceFormProps> = ({
           <option value="url">url</option>
           <option value="pdf">pdf</option>
         </select>
-        {/* <Input
-          value={sourceType}
-          onChange={(e) => setSourceType(e.target.value)}
-          className="w-full"
-          placeholder="Enter source type (e.g., url, pdf, text)"
-        /> */}
       </div>
     </div>
   );

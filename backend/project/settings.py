@@ -29,24 +29,9 @@ SECRET_KEY = os.getenv("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+# Allow every origins to request via http url.
+
 CORS_ALLOW_ALL_ORIGINS = True
-
-CORS_ALLOWED_ORIGINS = [
-    "http://localhost:3000",  # Add your frontend domain here
-    "http://127.0.0.1:3000",
-]
-
-CORS_ALLOW_HEADERS = [
-    "content-type",
-    "authorization",
-]
-
-CSRF_TRUSTED_ORIGINS = [
-    "http://localhost:3000",  # Add your frontend domain here
-    "http://127.0.0.1:3000",
-]
-
-ALLOWED_HOSTS = ['*']
 
 
 # Application definition

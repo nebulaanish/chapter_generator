@@ -5,13 +5,14 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import SectionForm from "./sectionForm";
 import SourceForm from "./sourceForm";
+import { baseUrl } from "@/api/url";
 
 const CourseOutlineForm: React.FC = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [source, setSource] = useState("");
-  const [sourceType, setSourceType] = useState("");
+  const [sourceType, setSourceType] = useState("url");
   const [sections, setSections] = useState([{ title: "", content: [""] }]);
-  const [responseData, setResponseData] = useState<any>(null); // State to store response
+  const [responseData, setResponseData] = useState<any>(null);
 
   const addSection = () =>
     setSections([...sections, { title: "", content: [""] }]);
@@ -57,16 +58,14 @@ const CourseOutlineForm: React.FC = () => {
       source_type: sourceType,
       course_outline: sections,
     };
+    console.log(payload);
 
     try {
-      const response = await fetch(
-        "http://localhost:8000/api/chapters/generate/",
-        {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(payload),
-        }
-      );
+      const response = await fetch(`${baseUrl}/chapters/generate/`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
 
       console.log("Response object:", response);
 
