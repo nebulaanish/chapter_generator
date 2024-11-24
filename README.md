@@ -6,6 +6,8 @@
 For Backend and Frontend : git clone https://github.com/nebulaanish/chapter_generator.git
 ```
 ```
+( For Backend )
+
 cd backend
 python -m venv .venv
 source .venv/bin/activate
@@ -31,6 +33,8 @@ SECRET_KEY=
 
 ```
 
+```
+( For Frontend ) 
 cd frontend
 npm install
 npm run dev
