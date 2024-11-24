@@ -47,4 +47,9 @@ class ChapterViewSet(ModelViewSet):
         title = rag_system.get_response_to_prompt(
             f"Create a suitable title for the given chapter. Here's the content: {response}"
         )
+
+        if "No Relevant Information Found" in response:
+            return Response(
+                {"title": "No Relevant Information Found", "text": ""}, status=200
+            )
         return Response({"title": title, "text": response}, status=200)
