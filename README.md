@@ -16,6 +16,18 @@ python manage.py runserver
 
 ```
 
+```
+
+Set Your Own Creddentials For Backend
+
+POSTGRES_DB_NAME = 
+POSTGRES_USER = 
+POSTGRES_PASSWORD = 
+POSTGRES_PORT = 
+POSTGRES_HOST = 
+GEMINI_API_KEY = 
+SECRET_KEY=
+
 
 ```
 
